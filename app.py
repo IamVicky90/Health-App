@@ -20,19 +20,18 @@ def pred_pnemoian(img_path):
     x=np.expand_dims(x, axis=0)
     pred=model.predict(x)
     output=np.argmax(pred,axis=1)
-    print(output)
     if output==0:
         return "Prediction Result: Don't worry You don't have any disease!"
     elif output==1:
         return "We found that you have Pnemonia disease please consult with the doctor"
 def pred_skin(img_path):
+    
     model=load_model(r"Model\skin cancer vgg16 model.h5")
     img=load_img(img_path,target_size=(224,224))
     x=img_to_array(img)/225
     x=np.expand_dims(x, axis=0)
     pred=model.predict(x)
     output=np.argmax(pred,axis=1)
-    print(output)
     if output==0:
         return "Prediction Result: Don't worry You don't have any disease!"
     elif output==1:
@@ -69,13 +68,11 @@ def heart_predict():
 
         thal=request.form['thal']
         values=[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
-        print(values)
         X=[]
         try:
             for value in values:
                 X.append(np.log(float(value)+1))
             output=model.predict([X])
-            print(output)
         except Exception as e:
             print("@@",e)
             return render_template('heart.html',prediction_text="Some unknown error occured please input the values in number or contact the develpor if it still occurs")
@@ -109,8 +106,7 @@ def breast_predict():
             print("@@",e)
             return render_template('breast.html',prediction_text="Some unknown error occured please input the values in number or contact the develpor if it still occurs")
         
-        output=model.predict([[mean_radius,mean_texture,mean_perimeter,mean_smoothness]])
-        print(output)
+        output=model.predict([[mean_radius,mean_texture,mean_perimeter,mean_area,mean_smoothness]])
         if output==0:
             return render_template('breast.html',prediction_text="Prediction Result: Don't worry You don't have any disease!")
         elif output==1:
@@ -124,7 +120,6 @@ def pnemonia():
 def predict_pnemonia():
     if request.method=='POST':
         f = request.files['file']
-        print("inside predict_pnemonia")
 
         # Save the file to ./uploads
         basepath = os.path.dirname(__file__)
@@ -133,7 +128,7 @@ def predict_pnemonia():
         f.save(file_path)
 
         # Make prediction
-        preds = pred_skin(file_path)
+        preds = pred_pnemoian(file_path)
         result=preds
         return result
     
@@ -159,7 +154,6 @@ def diabtes_predict():
             return render_template('diabtes.html',prediction_text="Some unknown error occured please input the values in number or contact the develpor if it still occurs")
         df=pd.DataFrame([[Pregnancies,Glucose,BloodPressure,SkinThickness,Insulin,BMI,DiabetesPedigreeFunction,Age]],columns=['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'])
         output=model.predict(df)
-        print(output)
         if output==0:
             return render_template('diabtes.html',prediction_text="Prediction Result: Don't worry You don't have diabtes!")
         elif output==1:
@@ -181,7 +175,7 @@ def predict_skin():
         f.save(file_path)
 
         # Make prediction
-        preds = pred_pnemoian(file_path)
+        preds = pred_skin(file_path)
         result=preds
         return result
 @app.route("/kidney", methods=['GET', 'POST'])
@@ -275,10 +269,8 @@ def kidney_predict():
             rbc_nan=0
         X=pd.DataFrame([[age, bp, sg, al, su, bgr, bu, sc, sod, pot, hemo,pcv, wc, rc, rbc_normal, rbc_nan, pc_normal, pc_nan,pcc_present, ba_present, htn_yes, dm_no, dm_yes, cad_yes,appet_poor, pe_yes, ane_yes]],columns=['age', 'bp', 'sg', 'al', 'su', 'bgr', 'bu', 'sc', 'sod', 'pot', 'hemo','pcv', 'wc', 'rc', 'rbc_normal', 'rbc_nan', 'pc_normal', 'pc_nan','pcc_present', 'ba_present', 'htn_yes', 'dm_no', 'dm_yes', 'cad_yes','appet_poor', 'pe_yes', 'ane_yes'])
 
-        print(X)
         X_col=X.columns[[ True,  True, False,  True, False,  True,  True,  True,  True,True,  True,  True,True,  True,  True,  True,  True, False,False, False,  True, False,  True,  True, False, False,True]]
         output=model.predict(X[X_col])
-        print(output)
         if output==0:
             return render_template('kidney.html',prediction_text="Result: \nPrediction Result: Don't worry You don't have any Kidney disease!")
         elif output==1:
@@ -287,4 +279,4 @@ def kidney_predict():
 
 
 if __name__ == "__main__":
-    app.run(threaded=False)
+    app.run(host="0.0.0.0",port="8080")
