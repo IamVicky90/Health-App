@@ -167,83 +167,57 @@
 
             Menu open: "hidden", Menu closed: "block"
           -->
-                      <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      <!-- <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                           stroke="currentColor" aria-hidden="true">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M4 6h16M4 12h16M4 18h16" />
-                      </svg>
+                      </svg> -->
                       <!-- Icon when menu is open. -->
                       <!--
             Heroicon name: x
 
             Menu open: "block", Menu closed: "hidden"
           -->
-                      <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                      <!-- <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                           stroke="currentColor" aria-hidden="true">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M6 18L18 6M6 6l12 12" />
-                      </svg>
+                      </svg> -->
                   </button>
               </div>
               <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                   <div class="flex-shrink-0 flex items-center">
-                      <img class="block lg:hidden h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow">
-                      <img class="hidden lg:block h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg"
-                          alt="Workflow">
+                      <!-- <p style="color: white;"> -->
+
+                       <h5 style="color: white;">
+                      
+                         Vicky AI Production
+                      </h5> 
+                         
+                      <!-- </p> -->
+                      
                   </div>
                   <div class="hidden sm:block sm:ml-6">
                       <div class="flex space-x-4">
                           <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                          <a href="#"
-                              class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Dashboard</a>
-                          <a href="#"
-                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
-                          <a href="#"
-                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                          <a href="#"
-                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Calendar</a>
+                          <a href="{{ url_for('home') }}"
+                              class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                          <a href="{{ url_for('heart') }}"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Heart Disease</a>
+                          <a href="{{ url_for('breast') }}"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Breast Cancer</a>
+                          <a href="{{ url_for('pnemonia') }}"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Pnemonia Disease</a>
+                          <a href="{{ url_for('diabtes') }}"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Diabtes</a>
+                          <a href="{{ url_for('skin') }}"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Skin Cancer</a>
+                          <a href="{{ url_for('kidney') }}"
+                              class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Chronic Kidney Disease</a>
                       </div>
                   </div>
               </div>
-              <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  <button
-                      class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
-                      <span class="sr-only">View notifications</span>
-                      <!-- Heroicon name: bell -->
-                      <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                          stroke="currentColor" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                      </svg>
-                  </button>
-
-                  <!-- Profile dropdown -->
-                  <div class="ml-3 relative">
-                      <div>
-                          <button
-                              class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                              id="user-menu" aria-haspopup="true">
-                              <span class="sr-only">Open user menu</span>
-                              <img class="h-8 w-8 rounded-full"
-                                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                                  alt="">
-                          </button>
-                      </div>
-                      <!--
-            Profile dropdown panel, show/hide based on dropdown state.
-
-            Entering: "transition ease-out duration-100"
-              From: "transform opacity-0 scale-95"
-              To: "transform opacity-100 scale-100"
-            Leaving: "transition ease-in duration-75"
-              From: "transform opacity-100 scale-100"
-              To: "transform opacity-0 scale-95"
-          -->
-
-                  </div>
-              </div>
+              
           </div>
       </div>
 
@@ -252,19 +226,7 @@
 
     Menu open: "block", Menu closed: "hidden"
   -->
-      <div class="hidden sm:hidden">
-          <div class="px-2 pt-2 pb-3 space-y-1">
-              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-              <a href="#"
-                  class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
-              <a href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
-              <a href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
-              <a href="#"
-                  class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
-          </div>
-      </div>
+     
   </nav>
 
   <!-- navbar End............................ -->
@@ -286,12 +248,12 @@
                         <div class="carousel-caption">
 
                             <h3>
-                                Plant Disease Prediction AI App</h3>
+                                Health Prediction AI App</h3>
                             <p>
                                 Many veterans said that Deep Learning and AI is a threat to our world, but if we
                                 use it properly, we can do many good things today, we will see a small example
-                                of this in which we will be in cotton farming
-                                Find out about the disease
+                                of this in which we
+                                find out about some of the several human diseases.
                             </p>
 
                         </div>
@@ -306,7 +268,7 @@
                         <h3>Health Prediction AI App
                         </h3>
                         <p>
-                            Just Click The Photo of your Plant and Submit <br> It will tell you the disease.</p>
+                            Red AI is come to <br> defeat black AI.</p>
 
                     </div>
                 </div>
@@ -319,7 +281,7 @@
                     <div class="container ">
                         <div class="carousel-caption">
                             <h3>
-                                Plant Disease Prediction AI App </h3>
+                                Health Prediction AI App </h3>
                             <p> All rights reserved by Vicky World Production
                        
                             </p>
@@ -349,8 +311,8 @@
 <section class="text-gray-600 body-font">
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-20">
-        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Just click the image for the Prediction.</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">There are six different disease prediction models Chronic Kidney Disease, Diabtes Prediction,Heart Disease Prediction,Breast Cancer Prediction,Pnemonia Prediction, and skin cancer Prediction, please select the Image for respective prediction.</p>
         
       </div>
       
@@ -361,9 +323,12 @@
             
             <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/static/images/11.jpeg">
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Shooting Stars</h1>
-              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Vicky AI Health Prediction App</h2>
+              
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Heart Disease Prediction</h1>
+              <p class="leading-relaxed"> It will tell you that the patient has some disease regarding heart or not, based on the information you provide to it.
+                <br>
+                <br>
                 </p>
                 
                 <a href="{{ url_for('heart') }}" style="text-decoration: none;" style="color: green;">
@@ -383,9 +348,9 @@
           <div class="flex relative">
             <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/static/images/2.jpeg">
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
-              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Vicky AI Health Prediction App</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Breast Cancer Prediction</h1>
+              <p class="leading-relaxed">Breast Cancer is now become a very severe and common disease espacially to women, this application will tell you that you have this disese or not.</p>
               <a href="{{ url_for('breast') }}" style="text-decoration: none;" style="color: green;">
               <button type="button" class="btn btn-outline-success">
                 
@@ -400,9 +365,14 @@
           <div class="flex relative">
             <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/static/images/3.jpeg">
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">The 400 Blows</h1>
-              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Vicky AI Health Prediction App</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Pnemonia Prediction</h1>
+              <p class="leading-relaxed">Please open this to know that you have Pnemonia disease or not just drop the X-ray image.
+                <br>
+                <br>
+                <br>
+              </p>
+
               <a href="{{ url_for('pnemonia') }}" style="text-decoration: none;" style="color: green;">
                 <button type="button" class="btn btn-outline-success">
                   
@@ -417,9 +387,9 @@
           <div class="flex relative">
             <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/static/images/4.jpeg">
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Neptune</h1>
-              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Vicky AI Health Prediction App</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Diabtes Prediction</h1>
+              <p class="leading-relaxed">It will tell you that you have diabtes or not based on the information that you give to the model.</p>
               <a href="{{ url_for('diabtes') }}" style="text-decoration: none;" style="color: green;">
                 <button type="button" class="btn btn-outline-success">
                   
@@ -434,9 +404,12 @@
           <div class="flex relative">
             <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/static/images/5.jpeg">
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Holden Caulfield</h1>
-              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Vicky AI Health Prediction App</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Skin Cancer Prediction</h1>
+              <p class="leading-relaxed">It will tell you that, you have skin cancer or not, just provide the picture to it.
+                <br>
+                <br>
+              </p>
               <a href="{{ url_for('skin') }}" style="text-decoration: none;" style="color: green;">
                 <button type="button" class="btn btn-outline-success">
                   
@@ -451,9 +424,9 @@
           <div class="flex relative">
             <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="/static/images/6.jpeg">
             <div class="px-8 py-10 relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">THE SUBTITLE</h2>
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Alper Kamu</h1>
-              <p class="leading-relaxed">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
+              <h2 class="tracking-widest text-sm title-font font-medium text-indigo-500 mb-1">Vicky AI Health Prediction App</h2>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">Kidney Disease Prediction</h1>
+              <p class="leading-relaxed">It will tell you that, you have most common chronic kidney disease or not, based on the information given to it.</p>
               <a href="{{ url_for('kidney') }}" style="text-decoration: none;" style="color: green;">
                 <button type="button" class="btn btn-outline-success">
                   
@@ -473,7 +446,7 @@
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-col text-center w-full mb-12">
         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
-        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify.</p>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">In case of any querry, or for some sugestion please contact us. </p>
       </div>
       <div class="lg:w-1/2 md:w-2/3 mx-auto">
         <div class="flex flex-wrap -m-2">
@@ -496,12 +469,19 @@
             </div>
         </div>
         <div class="p-2 w-full">
-            <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+            <button class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+              <a href="{{ url_for('home') }}" style="text-decoration: none;">
+                <p style="color: white;">
+
+                  Submit
+                </p>
+              </a> 
+            </button>
         </div>
           <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-              <a class="text-indigo-500">example@email.com</a>
-            <p class="leading-normal my-5">49 Smith St.
-              <br>Saint Cloud, MN 56301
+              <a class="text-indigo-500">waqasbilal02@gmail.com</a>
+            <p class="leading-normal my-5">Multan, Punjab
+              <br>Pakistan
             </p>
             <span class="inline-flex">
               <a class="text-gray-500">
@@ -541,10 +521,17 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
             <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
           </svg>
-          <p class="leading-relaxed text-lg">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware. Man bun next level coloring book skateboard four loko knausgaard. Kitsch keffiyeh master cleanse direct trade indigo juice before they sold out gentrify plaid gastropub normcore XOXO 90's pickled cindigo jean shorts. Slow-carb next level shoindigoitch ethical authentic, yr scenester sriracha forage franzen organic drinking vinegar.</p>
+          <p class="leading-relaxed text-lg">
+            Artificial Intelligence now a days is very famous and the top rated companies called it the 'job of the 21st centure'. After this it is now covering every field of our life like ecommerace, Medical, Sports, theif Detection and some anomalies detection in many ares like in banks, etc. So, that's why I exploring this field, while exploring a Health application idea is come into my mind so, this is how I implemented with best of my knowledge however, we are all human so, exceptions are always possible. 
+          </p>
           <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-          <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">HOLDEN CAULFIELD</h2>
-          <p class="text-gray-500">Senior Product Designer</p>
+          <h1 class="text-gray-900 font-medium title-font tracking-wider text-sm">
+          <h3>
+
+            Waqas Bilal
+          </h3>
+          </h1>
+          <p class="text-gray-500">The only Creater and Designer of Vicky Health Prediction. </p>
         </div>
       </div>
     </section>

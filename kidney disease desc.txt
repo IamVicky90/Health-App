@@ -6,44 +6,7 @@ Abstract: This dataset can be used to predict the chronic kidney disease and it 
 
 Data Set Characteristics:  
 
-Multivariate
 
-Number of Instances:
-
-400
-
-Area:
-
-N/A
-
-Attribute Characteristics:
-
-Real
-
-Number of Attributes:
-
-25
-
-Date Donated
-
-2015-07-03
-
-Associated Tasks:
-
-Classification
-
-Missing Values?
-
-Yes
-
-Number of Web Hits:
-
-188102
-
-
-Source:
-
-Source:
 We use the following representation to collect the dataset
 age - age
 bp - blood pressure
