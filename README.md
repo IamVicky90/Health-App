@@ -21,7 +21,7 @@
   
   __Click the images for the predictions.__
   
-  ![error check your internet](https://github.com/IamVicky90/Health-App/blob/main/git%20images/2.PNG)
+  ![error check your internet](https://github.com/IamVicky90/Health-App/blob/main/git%20images/1.PNG)
   
  
 
