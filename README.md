@@ -1,4 +1,4 @@
-#Health App based on 4 Machine Learning and 2 Deep Learnings at same place
+# Health App based on 4 Machine Learning and 2 Deep Learnings at same place
 ## 6 Different Health Predictions Models I trained
 ## Table of Contents.
   * [Demo](#demo)
