@@ -11,7 +11,7 @@
   * [Libraries](#libraries)
   
   ## Demo
-  Deployment Link. https://vicky-ai-app-health.azurewebsites.net/ .
+  Deployment Link. https://health-app-by-vicky.azurewebsites.net .
   
  
  __Frontent based on html, css.__
@@ -34,7 +34,7 @@ What could be a perfect way to utilize unfortunate lockdown period? Like most of
 ## Technical Aspect
 This project is divided into two part:
 1. Training a deep learning and machine learning model using Keras.
-2. Building deployed, and hosting a Flask web app on Microsoft Azure(https://vicky-ai-app-health.azurewebsites.net/ ).
+2. Building deployed, and hosting a Flask web app on Microsoft Azure( https://health-app-by-vicky.azurewebsites.net ).
 
 ## Installation
 The Code is written in Python 3.8. If you don't have Python installed you can find it [here](https://www.python.org/downloads/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. To install the required packages and libraries, run this command in the project directory after [downloading it](https://github.com/IamVicky90/Plant-Disease-Prediction/archive/main.zip):
