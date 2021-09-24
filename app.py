@@ -14,7 +14,7 @@ from werkzeug.utils import secure_filename
 # Create flask instance
 app = Flask(__name__)
 def pred_pnemoian(img_path):
-    model=load_model(r"Model/Chest XRay Pnemonia xception model.h5")
+    model=load_model("Model/Chest XRay Pnemonia xception model.h5")
     img=load_img(img_path,target_size=(224,224))
     x=img_to_array(img)/225
     x=np.expand_dims(x, axis=0)
@@ -26,7 +26,7 @@ def pred_pnemoian(img_path):
         return "We found that you have Pnemonia disease please consult with the doctor"
 def pred_skin(img_path):
     
-    model=load_model(r"Model/skin cancer vgg16 model.h5")
+    model=load_model("Model/skin cancer vgg16 model.h5")
     img=load_img(img_path,target_size=(224,224))
     x=img_to_array(img)/225
     x=np.expand_dims(x, axis=0)
@@ -93,7 +93,7 @@ def breast():
     return render_template('breast.html')
 @app.route("/breast_predict", methods=['GET', 'POST'])
 def breast_predict():
-    model = pickle.load(open(r'Model/brest_cancer_rf_model.sav', 'rb'))
+    model = pickle.load(open('Model/brest_cancer_rf_model.sav', 'rb'))
     print("@@ Breast Cancer Model Loaded")
     if request.method == 'POST':
         try:
@@ -137,7 +137,7 @@ def diabtes():
     return render_template('diabtes.html')
 @app.route("/diabtes_predict", methods=['GET', 'POST'])
 def diabtes_predict():
-    model = pickle.load(open(r'Model/diabetes_xg_0.76_model.sav', 'rb'))
+    model = pickle.load(open('Model/diabetes_xg_0.76_model.sav', 'rb'))
     print("@@ Diabtes Model Loaded")
     if request.method == 'POST':
         try:
@@ -183,7 +183,7 @@ def kidney():
     return render_template('kidney.html')
 @app.route("/kidney_predict", methods=['GET', 'POST'])
 def kidney_predict():
-    model = pickle.load(open(r'Model/kidney_disease_ab1_model.sav', 'rb'))
+    model = pickle.load(open('Model/kidney_disease_ab1_model.sav', 'rb'))
     print("@@ Kidney Model Loaded")
     if request.method=='POST':
         try:
